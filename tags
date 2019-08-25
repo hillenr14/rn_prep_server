@@ -1,0 +1,58 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CSRF_ENABLED	config.py	/^    CSRF_ENABLED = True$/;"	v	class:Config
+Config	config.py	/^class Config(object):$/;"	c
+DEBUG	config.py	/^    DEBUG = False$/;"	v	class:Config
+DEBUG	config.py	/^    DEBUG = False$/;"	v	class:ProductionConfig
+DEBUG	config.py	/^    DEBUG = True$/;"	v	class:DevelopmentConfig
+DEBUG	config.py	/^    DEBUG = True$/;"	v	class:StagingConfig
+DEVELOPMENT	config.py	/^    DEVELOPMENT = True$/;"	v	class:DevelopmentConfig
+DEVELOPMENT	config.py	/^    DEVELOPMENT = True$/;"	v	class:StagingConfig
+DevelopmentConfig	config.py	/^class DevelopmentConfig(Config):$/;"	c
+ProductionConfig	config.py	/^class ProductionConfig(Config):$/;"	c
+Result	models.py	/^class Result(db.Model):$/;"	c
+SECRET_KEY	config.py	/^    SECRET_KEY = 'this-really-needs-to-be-changed'$/;"	v	class:Config
+SQLALCHEMY_DATABASE_URI	config.py	/^    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']$/;"	v	class:Config
+StagingConfig	config.py	/^class StagingConfig(Config):$/;"	c
+TESTING	config.py	/^    TESTING = False$/;"	v	class:Config
+TESTING	config.py	/^    TESTING = True$/;"	v	class:TestingConfig
+TestingConfig	config.py	/^class TestingConfig(Config):$/;"	c
+__init__	models.py	/^    def __init__(self, url, result_all):$/;"	m	class:Result
+__repr__	models.py	/^    def __repr__(self):$/;"	m	class:Result	file:
+__tablename__	models.py	/^    __tablename__ = 'results'$/;"	v	class:Result
+app	app.py	/^app = Flask(__name__)$/;"	v
+app	hello.py	/^app = Flask(__name__)$/;"	v
+basedir	config.py	/^basedir = os.path.abspath(os.path.dirname(__file__))$/;"	v
+branch_labels	migrations/versions/d08907f0de04_.py	/^branch_labels = None$/;"	v
+config	migrations/env.py	/^config = context.config$/;"	v
+conn	worker.py	/^conn = redis.from_url(redis_url)$/;"	v
+count_and_save_words	app.py	/^def count_and_save_words(url):$/;"	f
+db	app.py	/^db = SQLAlchemy(app)$/;"	v
+depends_on	migrations/versions/d08907f0de04_.py	/^depends_on = None$/;"	v
+down_revision	migrations/versions/d08907f0de04_.py	/^down_revision = None$/;"	v
+downgrade	migrations/versions/d08907f0de04_.py	/^def downgrade():$/;"	f
+get_counts	app.py	/^def get_counts():$/;"	f
+get_results	app.py	/^def get_results(job_key):$/;"	f
+hello	hello.py	/^def hello():$/;"	f
+hello_name	hello.py	/^def hello_name(name):$/;"	f
+id	models.py	/^    id = db.Column(db.Integer, primary_key=True)$/;"	v	class:Result
+index	app.py	/^def index():$/;"	f
+listen	worker.py	/^listen = ['default']$/;"	v
+logger	migrations/env.py	/^logger = logging.getLogger('alembic.env')$/;"	v
+manager	manage.py	/^manager = Manager(app)$/;"	v
+migrate	manage.py	/^migrate = Migrate(app, db)$/;"	v
+process_revision_directives	migrations/env.py	/^    def process_revision_directives(context, revision, directives):$/;"	f	function:run_migrations_online
+q	app.py	/^q = Queue(connection=conn)$/;"	v
+redis_url	worker.py	/^redis_url = os.getenv('REDISTOGO_URL', 'redis:\/\/localhost:6379')$/;"	v
+result_all	models.py	/^    result_all = db.Column(JSON)$/;"	v	class:Result
+revision	migrations/versions/d08907f0de04_.py	/^revision = 'd08907f0de04'$/;"	v
+run_migrations_offline	migrations/env.py	/^def run_migrations_offline():$/;"	f
+run_migrations_online	migrations/env.py	/^def run_migrations_online():$/;"	f
+target_metadata	migrations/env.py	/^target_metadata = current_app.extensions['migrate'].db.metadata$/;"	v
+upgrade	migrations/versions/d08907f0de04_.py	/^def upgrade():$/;"	f
+url	models.py	/^    url = db.Column(db.String())$/;"	v	class:Result
+worker	worker.py	/^        worker = Worker(list(map(Queue, listen)))$/;"	v

@@ -11,6 +11,12 @@ beautifulsoup4 = "*"
 requests = "*"
 nltk = "*"
 redis = "*"
+rq = "*"
+psycopg2 = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+psycopg2-binary = "*"
+flask-script = "*"
 
 [requires]
 python_version = "3.7"
