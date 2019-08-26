@@ -79,13 +79,16 @@ def get_results(job_key):
     job = Job.fetch(job_key, connection=conn)
 
     if job.is_finished:
-        result = Result.query.filter_by(id=job.result).first()
-        results = sorted(
-            result.result_all.items(),
-            key=operator.itemgetter(1),
-            reverse=True
-        )[:10]
-        return jsonify(results)
+        if not type(job.result) is dict:
+            result = Result.query.filter_by(id=job.result).first()
+            results = sorted(
+                result.result_all.items(),
+                key=operator.itemgetter(1),
+                reverse=True
+            )[:20]
+            return jsonify(results)
+        else:
+            return jsonify(job.result), 400
     else:
         return "Nay!", 202
 
