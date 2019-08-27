@@ -86,6 +86,8 @@ def get_results(job_key):
                 key=operator.itemgetter(1),
                 reverse=True
             )[:20]
+            db.session.delete(result)
+            db.session.commit()
             return jsonify(results)
         else:
             return jsonify(job.result), 400
